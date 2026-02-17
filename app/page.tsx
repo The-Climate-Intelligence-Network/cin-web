@@ -25,7 +25,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-8 text-center">
           <h2 className="text-2xl font-bold text-yellow-900 mb-2">System Maintenance in Progress</h2>
           <p className="text-yellow-800 text-lg">
-            We're currently upgrading our website to a more robust climate data visualization and analytics platform. Our ongoing campaigns continue and we're still welcoming new members to join our network!
+            We're currently upgrading our website to a more robust climate data visualization and analytics platform. Our ongoing projects continue and we're still welcoming new members to join our network!
           </p>
         </div>
       </section>
@@ -33,55 +33,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-16">
         {/* Ongoing Campaigns Section */}
-        <section className="mb-20">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4 text-center">ONGOING CAMPAIGNS</h3>
-          <p className="text-center text-gray-600 mb-12">Our initiatives continue even during maintenance</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Campaign 1 */}
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-br from-green-600 to-green-800 h-48 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-5xl mb-2">🌊</div>
-                  <p className="font-semibold">On the Ground</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-sm text-gray-600 mb-3">Through #ontheground report illegal coastal constructions, wildlife incidents, and climate events etc.</p>
-                <p className="text-gray-800 font-semibold">We follow up and make sure action is taken against those responsible</p>
-              </div>
-            </div>
-
-            {/* Campaign 2 */}
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 h-48 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-5xl mb-2">🌿</div>
-                  <p className="font-semibold">Sounds of Nature</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-sm text-gray-600 mb-3">#soundofnature launches this January! Record sounds of nature and earn points for rare species and locations.</p>
-                <p className="text-gray-800 font-semibold">Help track climate change and biodiversity loss</p>
-              </div>
-            </div>
-
-            {/* Campaign 3 */}
-            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-700 h-48 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="text-5xl mb-2">♻️</div>
-                  <p className="font-semibold">Track the Trash</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-sm text-gray-600 mb-3">#trackthetrash adds waste and brand audits to beach cleanups – increasing their impact.</p>
-                <p className="text-gray-800 font-semibold">Track data, share interesting trash finds, and raise awareness to tackle pollution across Sri Lanka</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         {/* Join Network Section */}
         <section className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-lg p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -115,7 +67,7 @@ export default function Home() {
         <section className="mt-20 p-8 bg-blue-50 border-l-4 border-blue-600 rounded">
           <h4 className="font-bold text-blue-900 mb-2">📋 What's Happening</h4>
           <ul className="text-blue-800 space-y-2">
-            <li>✅ Campaigns are active and continuing</li>
+            <li>✅ Projects are active and continuing</li>
             <li>✅ New members can join our network</li>
             <li>⏳ Website features are being enhanced</li>
             <li>⏳ Full functionality will return shortly</li>
