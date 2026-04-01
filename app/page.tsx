@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const revalidate = 300;
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-24 py-12 pb-24">

@@ -1,3 +1,5 @@
+export const revalidate = 300;
+
 export default function KnowledgePage() {
     return (
         <div className="py-12">
