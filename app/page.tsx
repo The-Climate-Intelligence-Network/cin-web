@@ -9,7 +9,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row items-center gap-12 pt-8">
         <div className="flex-1 space-y-8">
           <h1 className="text-5xl lg:text-7xl font-bold text-deepForest tracking-tight leading-[1.1]">
-            Data Driven. <span className="text-teal">Citizen</span> Powered.
+            Data Driven. <span className="text-teal">Citizen Powered.</span> 
           </h1>
           <p className="text-xl text-charcoal leading-relaxed max-w-2xl">
             Equip the Global South with real-time climate intelligence tools and citizen-powered reporting infrastructure.
