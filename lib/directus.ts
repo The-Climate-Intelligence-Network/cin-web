@@ -30,7 +30,11 @@ export interface developer_applications {}
 export interface insights {
   id?: string;
   title?: string;
+  slug?: string;
+  summary?: string;
   content?: any;
+  date_published?: string;
+  author?: string;
   author_id?: string;
   category?: string;
 }
