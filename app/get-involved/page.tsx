@@ -5,7 +5,7 @@ export default function GetInvolvedPage() {
                 Get Involved
             </h1>
             <p className="text-lg text-charcoal leading-relaxed max-w-3xl">
-                Join the network as a citizen scientist, partner organization, or volunteer to help build our collective climate resilience.
+                Join the network as a member, contribute through Mission 1.5, or partner as an organization to help build our collective climate resilience.
             </p>
         </div>
     );

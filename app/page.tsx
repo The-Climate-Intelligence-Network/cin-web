@@ -26,7 +26,9 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Link
-              href="/get-involved"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd58XvbvKkeGLJhpetiuJhJ6MeV5LIrwxCivZtl4wSdlYE-Yw/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-sunflower text-charcoal font-bold uppercase tracking-widest px-8 py-4 rounded-lg hover:bg-sunflower/90 transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
             >
               Join the Network
@@ -104,7 +106,7 @@ export default function Home() {
       <section className="space-y-12 bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-16 -my-8 rounded-xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
         <div className="space-y-2">
           <span className="text-teal font-bold text-sm uppercase tracking-widest">Our Work</span>
-          <h2 className="text-4xl font-bold text-deepForest">Completed Projects</h2>
+          <h2 className="text-4xl font-bold text-deepForest">Projects & Impact</h2>
         </div>
         
         {/* Carousel Component */}
@@ -128,7 +130,7 @@ export default function Home() {
           {[
             { name: "Kaif Sally", role: "Co-founder/ Director - Strategy", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
             { name: "Simra Riyaz", role: "Co-founder/ Director - Policy & Legal", bio: "Navigating policy, compliance, and the rules that shape climate action.", image: "/avatars/simra.jpeg", linkedin: "https://lk.linkedin.com/in/simrariyaz" },
-            { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
+            { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth2.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
             { name: "Chathurya Wanniarachchi", role: "Co-founder/ Director - Advocacy & Legal", bio: "Turning climate issues into action through advocacy and legal pathways.", image: "/avatars/arya.jpeg", linkedin: "https://lk.linkedin.com/in/chathurya-wanniarachchi" },
             { name: "Khadeeja Ilham", role: "Director – Network Growth & Community Power", bio: "Growing the network and activating communities across the country.", image: "/avatars/khadee.jpg", linkedin: "https://lk.linkedin.com/in/khadeeja-ilham-257759361" },
             { name: "Yashika Nipuni", role: "Director - Operations & Sustainability + Finance Controller", bio: "Keeping operations efficient and finances aligned with impact.", image: "/avatars/yash.jpg", linkedin: "https://lk.linkedin.com/in/yashika-nipuni-05a3181b4" },
@@ -231,18 +233,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-deepForest text-surface rounded-2xl p-12 md:p-16 text-center space-y-6 relative overflow-hidden mt-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-forest/40 via-deepForest to-deepForest opacity-60"></div>
-        <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">Be Part of the Solution</h2>
-          <p className="text-surface/90 text-lg md:text-xl leading-relaxed">
-            The Climate Intelligence Network scales through collaborative effort. Contribute to the system through various pathways and make a measurable impact.
-          </p>
-          <div className="pt-4">
-            <Link href="/get-involved" className="inline-flex items-center gap-3 bg-sunflower text-charcoal font-bold uppercase tracking-widest px-10 py-4 text-lg rounded-lg hover:bg-sunflower/90 transition-transform hover:-translate-y-0.5 shadow-lg">
-              Join the Movement
-            </Link>
+      {/* Get Involved pathways */}
+      <section className="bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-20 -my-8 rounded-2xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
+        <div className="text-center space-y-12 max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-deepForest tracking-tight">Contribute to Climate Intelligence</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Join */}
+            <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col items-center text-center group hover:shadow-md hover:border-sunflower transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-sunflower/10 flex items-center justify-center text-sunflower mb-6 group-hover:bg-sunflower group-hover:text-charcoal transition-colors duration-300">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-deepForest mb-3">Join</h3>
+              <p className="text-charcoal leading-relaxed mb-8 flex-grow">
+                Join as a network member.
+              </p>
+              <Link 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd58XvbvKkeGLJhpetiuJhJ6MeV5LIrwxCivZtl4wSdlYE-Yw/viewform?usp=dialog" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+              >
+                SIGN UP
+              </Link>
+            </div>
+
+            {/* Contribute */}
+            <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col items-center text-center group hover:shadow-md hover:border-sunflower transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center text-teal mb-6 group-hover:bg-teal group-hover:text-white transition-colors duration-300">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 8.5C17 15.5 13 17 11 20z"/><path d="M11 20c-2.5-3-2.5-8.5 3-14"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-deepForest mb-3">Contribute</h3>
+              <p className="text-charcoal leading-relaxed mb-8 flex-grow">
+                Contribute time, skills or data.
+              </p>
+              <Link 
+                href="/mission-1-5" 
+                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+              >
+                APPLY NOW
+              </Link>
+            </div>
+
+            {/* Partner */}
+            <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col items-center text-center group hover:shadow-md hover:border-sunflower transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-6 group-hover:bg-forest group-hover:text-white transition-colors duration-300">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-deepForest mb-3">Partner</h3>
+              <p className="text-charcoal leading-relaxed mb-8 flex-grow">
+                For organizations to collaborate.
+              </p>
+              <Link 
+                href="/get-involved" 
+                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+              >
+                CONTACT US
+              </Link>
+            </div>
           </div>
         </div>
       </section>
