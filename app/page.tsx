@@ -73,8 +73,9 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-deepForest leading-tight">
               Empowering Citizen Science Across Sri Lanka
             </h2>
-            <p className="text-charcoal text-lg leading-relaxed">
-              We're a network of passionate changemakers from every district; students, professionals, advocates, and scientists; committed to climate action and biodiversity conservation nationwide. Join us for unique learning experiences, collaboration on impactful projects, access to funding and networking opportunities, and growth alongside like-minded individuals.
+            <p className="text-charcoal text-md leading-relaxed">
+              The Climate Intelligence Network (CIN) comprises over 200+ registered and active members representing all 25 districts of Sri Lanka. In addition to its nationwide reach, CIN maintains on-the-ground community collaborations in Galle, Nuwara Eliya, Jaffna, Mannar, Colombo, and Batticaloa. 
+              The network brings together a diverse cross-section of stakeholders, including everyone from smallholder farmers, to fishers, students, young professionals, and experienced climate practitioners, fostering inclusive and locally grounded climate action across the country.
             </p>
           </div>
           
@@ -130,7 +131,7 @@ export default function Home() {
           {[
             { name: "Kaif Sally", role: "Co-founder/ Director - Strategy", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
             { name: "Simra Riyaz", role: "Co-founder/ Director - Policy & Legal", bio: "Navigating policy, compliance, and the rules that shape climate action.", image: "/avatars/simra.jpeg", linkedin: "https://lk.linkedin.com/in/simrariyaz" },
-            { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth2.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
+            { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
             { name: "Chathurya Wanniarachchi", role: "Co-founder/ Director - Advocacy & Legal", bio: "Turning climate issues into action through advocacy and legal pathways.", image: "/avatars/arya.jpeg", linkedin: "https://lk.linkedin.com/in/chathurya-wanniarachchi" },
             { name: "Khadeeja Ilham", role: "Director – Network Growth & Community Power", bio: "Growing the network and activating communities across the country.", image: "/avatars/khadee.jpg", linkedin: "https://lk.linkedin.com/in/khadeeja-ilham-257759361" },
             { name: "Yashika Nipuni", role: "Director - Operations & Sustainability + Finance Controller", bio: "Keeping operations efficient and finances aligned with impact.", image: "/avatars/yash.jpg", linkedin: "https://lk.linkedin.com/in/yashika-nipuni-05a3181b4" },

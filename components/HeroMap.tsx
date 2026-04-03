@@ -6,10 +6,10 @@ import { motion } from "motion/react";
 const MAP_PINS = [
   { top: "16%", left: "78%", delay: 0.2, y: [0, -10, 0] as number[], duration: 4.5 }, // North
   { top: "28%", left: "32%", delay: 0.6, y: [0, 10, 0]  as number[], duration: 5.0 }, // West
-  { top: "25%", left: "40%", delay: 1.5, y: [0, 10, 0]  as number[], duration: 5.0 }, // West
-  { top: "38%", left: "53%", delay: 2.5, y: [0, -8, 0]  as number[], duration: 4.0 }, // Center
-  { top: "53%", left: "24%", delay: 3.5, y: [0, 9, 0]   as number[], duration: 5.5 }, // South-west
-  { top: "75%", left: "54%", delay: 4.8, y: [0, -10, 0] as number[], duration: 4.8 }, // South-east
+  { top: "25%", left: "40%", delay: 1.2, y: [0, 10, 0]  as number[], duration: 5.0 }, // West
+  { top: "38%", left: "53%", delay: 2.0, y: [0, -8, 0]  as number[], duration: 4.0 }, // Center
+  { top: "53%", left: "24%", delay: 3.0, y: [0, 9, 0]   as number[], duration: 5.5 }, // South-west
+  { top: "75%", left: "54%", delay: 4.0, y: [0, -10, 0] as number[], duration: 4.8 }, // South-east
 ];
 
 export default function HeroMap() {

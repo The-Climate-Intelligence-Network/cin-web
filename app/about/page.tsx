@@ -1,12 +1,28 @@
+import HeroAbout from "@/components/about/HeroAbout";
+import MissionPurpose from "@/components/about/MissionPurpose";
+import PrinciplesValues from "@/components/about/PrinciplesValues";
+import TeamSection from "@/components/about/TeamSection";
+import AdvisoryBoard from "@/components/about/AdvisoryBoard";
+import Partners from "@/components/about/Partners";
+import Transparency from "@/components/about/Transparency";
+import News from "@/components/about/News";
+
+export const metadata = {
+  title: 'About Us | Climate Intelligence Network',
+  description: 'Learn about the Climate Intelligence Network, our mission, values, and team.',
+};
+
 export default function AboutPage() {
-    return (
-        <div className="py-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-deepForest tracking-tight mb-6">
-                About CIN
-            </h1>
-            <p className="text-lg text-charcoal leading-relaxed max-w-3xl">
-                The Climate Intelligence Network (CIN) is a data-driven civic platform dedicated to equipping communities with the intelligence necessary to adapt to and mitigate climate impact.
-            </p>
-        </div>
-    );
+  return (
+    <div className="flex flex-col gap-24 py-12 pb-24">
+      <HeroAbout />
+      <MissionPurpose />
+      <PrinciplesValues />
+      <TeamSection />
+      <AdvisoryBoard />
+      <Partners />
+      <Transparency />
+      <News />
+    </div>
+  );
 }
