@@ -102,4 +102,5 @@ export interface Schema {
   tools: tools[];
 }
 
-export const directus = createDirectus<Schema>(process.env.NEXT_PUBLIC_DIRECTUS_URL as string).with(rest());
+const directusUrl = process.env.NEXT_PUBLIC_DIRECTUS_URL || "https://cms.theclimateintel.org";
+export const directus = createDirectus<Schema>(directusUrl).with(rest());
