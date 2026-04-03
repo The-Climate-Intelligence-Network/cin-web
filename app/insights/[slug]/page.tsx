@@ -20,7 +20,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-async function getInsight(slug: string): Promise<InsightArticle | null> {
+async function getImpactStory(slug: string): Promise<InsightArticle | null> {
   const items = await directus.request(
     readItems("insights", {
       filter: { slug: { _eq: slug } },
@@ -32,17 +32,17 @@ async function getInsight(slug: string): Promise<InsightArticle | null> {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const insight = await getInsight(slug);
-  if (!insight) return { title: "Not Found | CIN Insights" };
+  const insight = await getImpactStory(slug);
+  if (!insight) return { title: "Not Found | CIN Impact Stories" };
   return {
-    title: `${insight.title} | CIN Insights`,
+    title: `${insight.title} | CIN Impact Stories`,
     description: insight.summary ?? undefined,
   };
 }
 
-export default async function InsightArticlePage({ params }: PageProps) {
+export default async function ImpactStoryArticlePage({ params }: PageProps) {
   const { slug } = await params;
-  const insight = await getInsight(slug);
+  const insight = await getImpactStory(slug);
 
   if (!insight) notFound();
 
@@ -54,7 +54,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
         <nav style={{ marginBottom: "2rem" }}>
           <span style={{ color: "#568265", fontSize: "0.875rem", fontWeight: 500 }}>
             <a href="/insights" style={{ color: "#568265", textDecoration: "none" }}>
-              Insights
+              Impact Stories
             </a>
             {" "}
             <span style={{ color: "#46A6A8", margin: "0 0.5rem" }}>›</span>

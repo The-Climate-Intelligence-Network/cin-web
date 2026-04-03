@@ -302,13 +302,13 @@ export default function Home() {
       </section>
 
       {/* Developer Strip */}
-      <section className="bg-deepIris/10 border-l-4 border-deepIris p-6 sm:p-8 rounded flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section className="bg-deepIris/10 border-l-4 border-deepIris -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-12 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-6 transition-all">
         <div className="space-y-1">
-          <h2 className="text-xl font-semibold text-deepForest">Building Climate Infrastructure?</h2>
-          <p className="text-charcoal bg-transparent">Integrate our APIs or contribute to the open-source civic codebase.</p>
+          <h2 className="text-2xl font-bold text-deepForest">Building Climate Infrastructure?</h2>
+          <p className="text-charcoal/80 text-lg">Join our developer team and help build the open-source civic codebase for climate intelligence.</p>
         </div>
-        <Link href="/developers" className="border border-deepIris text-deepIris font-medium px-6 py-2 rounded hover:bg-deepIris hover:text-white transition-colors">
-          Contribute
+        <Link href="/developers" className="border-2 border-deepIris text-deepIris font-bold uppercase tracking-widest px-8 py-4 rounded-lg hover:bg-deepIris hover:text-white transition-all shadow-sm hover:shadow-md">
+          Join Developer Team
         </Link>
       </section>
 

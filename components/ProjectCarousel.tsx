@@ -3,59 +3,103 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 
-const projects = [
+interface Partner {
+  name: string;
+  logo?: string;
+}
+
+interface Metric {
+  label: string;
+  value: string;
+}
+
+interface Project {
+  title: string;
+  description: string;
+  image?: string;
+  metrics: Metric[];
+  partners: Partner[];
+  accentColor: string;
+  accentLight: string;
+}
+
+const projects: Project[] = [
   {
-    title: "Coastal Mangrove Restoration",
-    description: "Community-led effort to restore vital mangrove ecosystems along the western coastline, protecting against erosion.",
+    title: "LCOY Sri Lanka 2025",
+    description: "The Local Conference of Youth (LCOY) Sri Lanka 2025 brought together 140 youth delegates across all districts of Sri Lanka for 2 days of building youth capacity in climate policy, literacy, and solution building.",
+    image: "/photos/lcoy.jpg",
     metrics: [
-      { label: "Trees", value: "10k+" },
-      { label: "Area", value: "50ha" }
+      { label: "Delegates", value: "140" },
+      { label: "Districts", value: "25" }
     ],
-    partners: ["USAID", "UNDP", "ForestDept"],
+    partners: [
+      { name: "YOUNGO", logo: "/partnerlogos/youngo.jpg" },
+      { name: "UNICEF Sri Lanka", logo: "/partnerlogos/unicef.png" },
+      { name: "IOM", logo: "/partnerlogos/IOM-official_Logo_PRIM_BLUE_RGB-EN.svg" },
+      { name: "Commonwealth Asia Youth Alliance (CAYA)", logo: "/partnerlogos/CAYA_Main Logo.png" },
+      { name: "World Youth for Climate Justice (WYCJ)", logo: "/partnerlogos/WYCJ+Logo+with+text.png" },
+      { name: "Rotaract Colombo Fort", logo: "/partnerlogos/Colombo Fort - Cranberry.png" },
+      { name: "The Road to Rights", logo: "/partnerlogos/Road to Rights New Logo 222.png" },
+    ],
     accentColor: "border-teal",
     accentLight: "bg-teal/5",
   },
   {
-    title: "Urban Water Quality",
-    description: "Citizen scientists tracking pollution levels in major urban waterways to enable targeted interventions.",
+    title: "YCATs",
+    description: "Our youth-led national network equipping district leaders with climate science, citizen science, and storytelling tools to drive community-based climate action and accountability.",
+    image: "/photos/ycat.jpg",
     metrics: [
-      { label: "Samples", value: "1,200" },
-      { label: "Policy", value: "3" }
+      { label: "Districts", value: "5" },
+      { label: "District Leaders", value: "120" }
     ],
-    partners: ["NWSDB", "CEB", "IUCN"],
+    partners: [
+      { name: "UNICEF", logo: "/partnerlogos/unicef.png" },
+      { name: "Global Youth Biodiversity Network (GYBN)", logo: "/partnerlogos/GYBN.png" },
+      { name: "Greenpeace South Asia", logo: "/partnerlogos/Greenpeace.png" },
+      { name: "Bharathi Foundation", logo: "/partnerlogos/Bharathi.png" }
+    ],
     accentColor: "border-forest",
     accentLight: "bg-forest/5",
   },
   {
-    title: "Biodiversity Hub",
-    description: "A centralized platform for mapping Sri Lanka's unique flora and fauna, enabling real-time sightings.",
+    title: "Oceans - 10",
+    description: "Oceans-10 is an interactive marine conservation board game developed by CIN and funded by the Pearl Protectors, simulating real-world ocean challenges and challenging players to design practical solutions.",
+    image: "/photos/oceans.jpg",
     metrics: [
-      { label: "Species", value: "450+" },
-      { label: "Data", value: "25k" }
+      { label: "Total Participants", value: "200+" },
+      { label: "Total Time Engaged (Minutes)", value: "800+" }
     ],
-    partners: ["WWC", "SLWildlife", "NatGeo"],
+    partners: [
+      { name: "The Pearl Protectors", logo: "/partnerlogos/The-Pearl-Protectors-Logo-Horizontal-Black.png" },
+    ],
     accentColor: "border-sunflower",
     accentLight: "bg-sunflower/5",
   },
   {
-    title: "Renewable Potential",
-    description: "Mapping solar and wind potential across residential zones to provide data-backed reasons to switch.",
+    title: "Advocacy at Lanka Comic Con",
+    description: "Lanka Comic Con translated climate action into accessible engagement, raising awareness on citizen-led climate intelligence and converting high-footfall interest into meaningful action through on-the-spot network sign-ups.",
+    image: "/photos/lcc.jpg",
     metrics: [
-      { label: "Roofs", value: "5,000" },
-      { label: "MW", value: "15" }
+      { label: "Reach", value: "200+" },
+      { label: "Network Signups", value: "20" }
     ],
-    partners: ["SustainableEnergy", "ADB"],
+    partners: [
+      { name: "Lanka Comic Con", logo: "/partnerlogos/trilingualLCCLogo.png" }
+    ],
     accentColor: "border-teal",
     accentLight: "bg-teal/5",
   },
   {
-    title: "Climate Literacy",
-    description: "Empowering the next generation with data-driven climate education workshops across 20 districts.",
+    title: "Cyclone Ditwah Joint Rapid Needs Assessment Support",
+    description: "Partnered with WFP to coordinate a nationwide volunteer mobilization for the data generation during the Rapid Needs Assessment across Sri Lanka. Approximately 106,000 data points were generated.",
+    image: "/photos/IMG-20251209-WA0049.jpg",
     metrics: [
-      { label: "Students", value: "2,500" },
-      { label: "Districts", value: "20" }
+      { label: "Data Points", value: "106,000+" },
+      { label: "Divisional Secretariats", value: "201" }
     ],
-    partners: ["EduMin", "UNESCO", "SaveChildren"],
+    partners: [
+      { name: "World Food Programme (WFP)", logo: "/partnerlogos/World_Food_Programme_Logo_Simple.svg.png" }
+    ],
     accentColor: "border-deepIris",
     accentLight: "bg-deepIris/5",
   }
@@ -93,7 +137,7 @@ export default function ProjectCarousel() {
   return (
     <div className="relative group/carousel">
       {/* Navigation Controls */}
-      <div className="absolute -top-16 right-0 flex items-center gap-3">
+      <div className="absolute -top-24 right-0 flex items-center gap-3">
         <button
           onClick={() => scroll("left")}
           disabled={!canScrollLeft}
@@ -138,19 +182,24 @@ export default function ProjectCarousel() {
             className="flex-shrink-0 w-[85vw] md:w-[450px] snap-start"
           >
             <div className={`h-full bg-white rounded-2xl border border-forest/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group`}>
-              {/* Image Placeholder Container */}
+              {/* Image Container */}
               <div className={`relative h-52 ${project.accentLight} overflow-hidden`}>
-                <div className="absolute inset-0 opacity-10 flex items-center justify-center">
-                  <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#3F664F_1px,_transparent_1px)] [background-size:24px_24px]"></div>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-forest/40 font-bold text-xs uppercase tracking-widest relative z-10">Image Placeholder</span>
-                </div>
-                
-                {/* Accent Ribbon/Sticker */}
-                <div className={`absolute top-4 left-4 px-3 py-1 rounded-full border border-forest/10 bg-white/90 backdrop-blur-sm shadow-sm`}>
-                   <span className="text-[10px] font-extrabold text-forest uppercase tracking-widest">Project 0{index + 1}</span>
-                </div>
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 opacity-10 flex items-center justify-center">
+                      <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#3F664F_1px,_transparent_1px)] [background-size:24px_24px]"></div>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-forest/40 font-bold text-xs uppercase tracking-widest relative z-10">Image Placeholder</span>
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* Content Side */}
@@ -166,22 +215,26 @@ export default function ProjectCarousel() {
                   {project.description}
                 </p>
 
-                {/* Partners Section */}
-                <div className="mb-8">
-                   <div className="text-[9px] font-bold text-charcoal/40 uppercase tracking-[0.2em] mb-3">Supporting Partners</div>
-                   <div className="flex flex-wrap gap-2">
-                     {project.partners.map((partner, pIdx) => (
-                       <div key={pIdx} className="w-10 h-10 rounded-full bg-forest/5 border border-forest/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110 cursor-help" title={partner}>
-                         <span className="text-[8px] font-bold text-forest/40 text-center uppercase px-1 leading-[1.1]">{partner.substring(0, 3)}</span>
-                       </div>
-                     ))}
-                     <div className="w-10 h-10 rounded-full border border-dashed border-forest/20 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-forest/20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
-                     </div>
-                   </div>
-                </div>
+                 <div className="mb-8">
+                    <div className="text-[9px] font-bold text-charcoal/40 uppercase tracking-[0.2em] mb-3">Collaborators / Donors</div>
+                    <div className="flex flex-wrap gap-2">
+                      {project.partners.map((partner, pIdx) => (
+                        <div 
+                          key={pIdx} 
+                          className="w-11 h-11 rounded-full bg-white border border-forest/10 flex items-center justify-center transition-all duration-300 transform hover:scale-110 cursor-help overflow-hidden p-1 shadow-sm" 
+                          title={partner.name}
+                        >
+                          {partner.logo ? (
+                            <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain" />
+                          ) : (
+                            <span className="text-[9px] font-bold text-forest/40 text-center uppercase px-1 leading-[1.1]">
+                              {partner.name.substring(0, 3)}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                 </div>
 
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-2 gap-4 mt-auto pt-6 border-t border-forest/5 bg-surface/30 -mx-8 px-8 rounded-b-2xl">
