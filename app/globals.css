@@ -19,3 +19,11 @@ body {
   color: var(--color-charcoal);
   font-family: var(--font-lato), sans-serif;
 }
+
+@utility no-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

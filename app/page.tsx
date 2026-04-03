@@ -3,6 +3,8 @@ import HeroMap from "@/components/HeroMap";
 import NetworkMapWrapper from "@/components/NetworkMapWrapper";
 import Image from "next/image";
 
+import ProjectCarousel from "@/components/ProjectCarousel";
+
 export const revalidate = 300;
 
 export default function Home() {
@@ -104,55 +106,13 @@ export default function Home() {
           <span className="text-teal font-bold text-sm uppercase tracking-widest">Our Work</span>
           <h2 className="text-4xl font-bold text-deepForest">Completed Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Project 1 */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-forest/10 flex flex-col hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group">
-            <div className="h-56 bg-forest/20 flex items-center justify-center relative overflow-hidden">
-              <span className="text-forest/60 font-medium">Coastal Image Placeholder</span>
-              <div className="absolute inset-0 bg-deepForest/5 group-hover:bg-transparent transition-colors"></div>
-            </div>
-            <div className="p-8 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-deepForest mb-3">Coastal Mangrove Restoration</h3>
-              <p className="text-charcoal leading-relaxed mb-8 flex-1">
-                Community-led effort to restore vital mangrove ecosystems along the western coastline, protecting against erosion and fostering marine biodiversity.
-              </p>
-              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-forest/10">
-                <div>
-                  <div className="text-xl font-bold text-teal mb-1">10,000+</div>
-                  <div className="text-[10px] font-bold text-charcoal/60 uppercase tracking-widest">Trees Planted</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-teal mb-1">50ha</div>
-                  <div className="text-[10px] font-bold text-charcoal/60 uppercase tracking-widest">Area Restored</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Project 2 */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-forest/10 flex flex-col hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group">
-            <div className="h-56 bg-forest/20 flex items-center justify-center relative overflow-hidden">
-              <span className="text-forest/60 font-medium">Urban Water Image Placeholder</span>
-              <div className="absolute inset-0 bg-deepForest/5 group-hover:bg-transparent transition-colors"></div>
-            </div>
-            <div className="p-8 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-deepForest mb-3">Urban Water Quality</h3>
-              <p className="text-charcoal leading-relaxed mb-8 flex-1">
-                Citizen scientists tracking pollution levels in major urban waterways to enable targeted interventions and drive policy improvement.
-              </p>
-              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-forest/10">
-                <div>
-                  <div className="text-xl font-bold text-teal mb-1">1,200</div>
-                  <div className="text-[10px] font-bold text-charcoal/60 uppercase tracking-widest">Samples Taken</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-teal mb-1">3</div>
-                  <div className="text-[10px] font-bold text-charcoal/60 uppercase tracking-widest">Policy Changes</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        
+        {/* Carousel Component */}
+        <div className="w-full">
+          <ProjectCarousel />
         </div>
       </section>
+
 
       {/* Team */}
       <section className="space-y-12">
