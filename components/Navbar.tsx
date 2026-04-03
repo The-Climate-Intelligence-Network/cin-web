@@ -30,7 +30,7 @@ export default function Navbar() {
                     <li key={item.label}>
                         <Link
                             href={item.href}
-                            className="text-sm font-bold uppercase tracking-wide opacity-90 hover:opacity-100 transition-opacity"
+                            className="relative text-xs font-extrabold uppercase tracking-[0.05em] opacity-85 hover:opacity-100 transition-all after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-sunflower after:left-0 after:-bottom-1.5 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                         >
                             {item.label}
                         </Link>
