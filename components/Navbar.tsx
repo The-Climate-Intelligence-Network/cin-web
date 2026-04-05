@@ -21,7 +21,7 @@ export default function Navbar() {
                     width={250}
                     height={100}
                     priority
-                    className="h-11 w-auto object-contain"
+                    className="h-14 w-auto object-contain -mt-1"
                 />
             </Link>
 

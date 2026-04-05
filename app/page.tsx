@@ -22,7 +22,7 @@ export default function Home() {
             Data Driven. <span className="text-teal">Citizen Powered.</span> 
           </h1>
           <p className="text-xl text-charcoal leading-relaxed max-w-2xl">
-            Equipping the Global South with real-time climate intelligence.
+            Mobilizing citizens to bridge the climate data gap through inclusive technology, citizen science, and climate storytelling.
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Link

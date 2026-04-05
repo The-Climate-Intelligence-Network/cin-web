@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@directus/sdk": "^18.0.3",
+    "lucide-react": "^1.7.0",
     "maplibre-gl": "^5.21.1",
     "motion": "^12.38.0",
     "next": "16.1.6",
