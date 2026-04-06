@@ -2,8 +2,8 @@ import Link from "next/link";
 import HeroMap from "@/components/HeroMap";
 import NetworkMapWrapper from "@/components/NetworkMapWrapper";
 import Image from "next/image";
-
 import ProjectCarousel from "@/components/ProjectCarousel";
+import Partners from "@/components/about/Partners";
 
 export const revalidate = 300;
 
@@ -240,6 +240,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <Partners />
 
       {/* Get Involved pathways */}
       <section className="bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-20 -my-8 rounded-2xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
