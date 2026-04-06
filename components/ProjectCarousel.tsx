@@ -118,6 +118,58 @@ const projects: Project[] = [
     accentColor: "border-deepIris",
     accentLight: "bg-deepIris/5",
     category: "Citizen science",
+  },
+  {
+    title: "Mission 1.5",
+    description: "A gamified community data platform that transforms citizen science into an accountability tool connecting local environmental evidence to decision-making processes.",
+    image: "/photos/DSC_5666.png",
+    metrics: [],
+    partners: [
+      { name: "WYDF", logo: "/partnerlogos/wydf.jpg" }
+    ],
+    accentColor: "border-teal",
+    accentLight: "bg-teal/5",
+    category: "Tech for Climate",
+  },
+  {
+    title: "Climate Tech Mini Hackathon",
+    description: "A mini hackathon organized to ideate and plan the architecture and features of the Mission 1.5 app.",
+    image: "/photos/hack.jpg",
+    metrics: [
+      { label: "Developers", value: "6" }
+    ],
+    partners: [],
+    accentColor: "border-teal",
+    accentLight: "bg-teal/5",
+    category: "Tech for Climate",
+  },
+  {
+    title: "TrackTheTrash",
+    description: "Track the Trash turns cleanups into climate intelligence by enabling volunteers to document, trace, and audit waste through standardized geo-tagged data that identifies pollution sources and informs policy and corporate action.",
+    image: "/photos/ttt.jpg",
+    metrics: [
+      { label: "Youth trained", value: "100+" },
+      { label: "Data points", value: "500" }
+    ],
+    partners: [
+      { name: "AIESEC Sri Lanka", logo: "/partnerlogos/Blue-Logo-1.webp" },
+      { name: "Clean Ocean Force", logo: "/partnerlogos/Clean-Ocean-Force_logo1.png" }
+    ],
+    accentColor: "border-deepIris",
+    accentLight: "bg-deepIris/5",
+    category: "Citizen science",
+  },
+  {
+    title: "NDC 3.0 Learning Hub",
+    description: "A centralized platform for climate policy literacy, providing stakeholders with data-driven insights and educational resources to understand and contribute to Sri Lanka's Nationally Determined Contributions (NDCs).",
+    image: "/photos/Screenshot_12-2-2026_93530_theclimateintel.org.jpg",
+    metrics: [
+      { label: "Unique impressions", value: "30,000+" }
+    ],
+    partners: [],
+    accentColor: "border-sunflower",
+    accentLight: "bg-sunflower/5",
+    category: "Data for change",
   }
 ];
 

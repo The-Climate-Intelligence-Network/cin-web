@@ -12,7 +12,7 @@ export default function HeroAbout() {
         Transforming Climate Action Through Intelligence
       </h1>
       <p className="text-xl text-charcoal leading-relaxed max-w-3xl mx-auto mt-6">
-        The Climate Intelligence Network (CIN) is driven by a mission to equip the citizens of the Global South with the tools and information necessary to fight for climate justice and protect our planet.
+        The Climate Intelligence Network (CIN) is driven by a mission to equip the citizens of the Global South with the tools and insights necessary to fight for climate justice and bridge the climate data gap.
       </p>
     </section>
   );

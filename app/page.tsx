@@ -302,7 +302,7 @@ export default function Home() {
                 href="/get-involved" 
                 className="text-forest font-bold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
               >
-                CONTACT US
+                Join us on our mission
               </Link>
             </div>
           </div>
