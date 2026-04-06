@@ -161,12 +161,22 @@ const projects: Project[] = [
   },
   {
     title: "NDC 3.0 Learning Hub",
-    description: "A centralized platform for climate policy literacy, providing stakeholders with data-driven insights and educational resources to understand and contribute to Sri Lanka's Nationally Determined Contributions (NDCs).",
+    description: "The Tri-Lingual Learning Hub was developed to demystify the NDCs and make them accessible to youth across the country. Partnered with UNICE & the NDC 3.0 Sounding Board and represented youth in national consultations during NDC 3.0 formulation, contributing to Sri Lanka’s first formal inclusion of youth considerations in the NDC framework.",
     image: "/photos/Screenshot_12-2-2026_93530_theclimateintel.org.jpg",
     metrics: [
       { label: "Unique impressions", value: "30,000+" }
     ],
-    partners: [],
+    partners: [
+      { name: "Rotaract Colombo North", logo: "/partnerlogos/Copy-of-Club-New-Logo-CRANBERRY-e1742494275796.png" },
+      { name: "WNPS Youth Wing", logo: "/partnerlogos/WNPS-YOUTH_FINAL_web-01.png" },
+      { name: "Pioneers Youth", logo: "/partnerlogos/PY-logo-e1742494373641-295x300.png" },
+      { name: "World Youth for Climate Justice (WYCJ)", logo: "/partnerlogos/wyfcj-e1742494605438-280x300.png" },
+      { name: "Road to Rights G17", logo: "/partnerlogos/R2R-G17-Logo-e1742494473166-298x300.png" },
+      { name: "The Road to Rights", logo: "/partnerlogos/Road to Rights New Logo 222.png" },
+      { name: "Commonwealth Asia Youth Alliance (CAYA)", logo: "/partnerlogos/CAYA_Main Logo.png" },
+      { name: "U-Report Sri Lanka", logo: "/partnerlogos/UREPORT.png" },
+      { name: "UNICEF Sri Lanka", logo: "/partnerlogos/unicef.png" }
+    ],
     accentColor: "border-sunflower",
     accentLight: "bg-sunflower/5",
     category: "Data for change",
