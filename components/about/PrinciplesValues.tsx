@@ -1,4 +1,4 @@
-import { Heart, Database, Users, Globe } from 'lucide-react';
+import { Heart, Database, Users, Globe, ShieldCheck } from 'lucide-react';
 
 export default function PrinciplesValues() {
   return (
@@ -13,9 +13,9 @@ export default function PrinciplesValues() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
         {/* Card 1 */}
-        <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
           <div className="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center text-teal mb-6">
             <Database className="w-6 h-6" strokeWidth={2.5} />
           </div>
@@ -26,7 +26,7 @@ export default function PrinciplesValues() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
           <div className="w-14 h-14 rounded-full bg-sunflower/10 flex items-center justify-center text-sunflower mb-6">
             <Users className="w-6 h-6" strokeWidth={2.5} />
           </div>
@@ -37,13 +37,24 @@ export default function PrinciplesValues() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-2xl p-10 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
           <div className="w-14 h-14 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-6">
             <Globe className="w-6 h-6" strokeWidth={2.5} />
           </div>
           <h3 className="text-2xl font-bold text-deepForest mb-3">Global South Focus</h3>
           <p className="text-charcoal leading-relaxed flex-grow">
             We prioritize the voices and needs of communities in the Global South, who are often most affected by climate change.
+          </p>
+        </div>
+
+        {/* Card 4 */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-forest/10 flex flex-col group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div className="w-14 h-14 rounded-full bg-jade/20 flex items-center justify-center text-forest mb-6">
+            <ShieldCheck className="w-6 h-6" strokeWidth={2.5} />
+          </div>
+          <h3 className="text-2xl font-bold text-deepForest mb-3">Responsible Tech</h3>
+          <p className="text-charcoal leading-relaxed flex-grow">
+            We build and deploy <strong>open-source</strong> technology that prioritizes ethics, privacy, and community-led governance to ensure solutions benefit all.
           </p>
         </div>
       </div>

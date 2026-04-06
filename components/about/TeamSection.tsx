@@ -5,10 +5,10 @@ import { Users } from 'lucide-react';
 
 export default function TeamSection() {
   const teamMembers = [
-    { name: "Kaif Sally", role: "Co-founder/ Director - Strategy & Innovation", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
-    { name: "Simra Riyaz", role: "Co-founder/ Director - Policy & Legal", bio: "Navigating policy, compliance, and the rules that shape climate action.", image: "/avatars/simra.jpeg", linkedin: "https://lk.linkedin.com/in/simrariyaz" },
+    { name: "Kaif Sally", role: "Co-founder/ Director - Strategy & Innovation", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif2.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
+    { name: "Simra Riyaz", role: "Co-founder/ Director - Policy & Legal", bio: "Navigating policy, compliance, and the rules that shape climate action.", image: "/avatars/simra2.jpeg", linkedin: "https://lk.linkedin.com/in/simrariyaz" },
     { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth2.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
-    { name: "Chathurya Wanniarachchi", role: "Co-founder/ Director - Advocacy & Legal", bio: "Turning climate issues into action through advocacy and legal pathways.", image: "/avatars/arya.jpeg", linkedin: "https://lk.linkedin.com/in/chathurya-wanniarachchi" },
+    { name: "Chathurya Wanniarachchi", role: "Co-founder/ Director - Advocacy & Legal", bio: "Turning climate issues into action through advocacy and legal pathways.", image: "/avatars/arya2.jpeg", linkedin: "https://lk.linkedin.com/in/chathurya-wanniarachchi" },
     { name: "Khadeeja Ilham", role: "Director – Network Growth & Community Power", bio: "Growing the network and activating communities across the country.", image: "/avatars/khadee.jpg", linkedin: "https://lk.linkedin.com/in/khadeeja-ilham-257759361" },
     { name: "Yashika Nipuni", role: "Director - Operations & Sustainability + Finance Controller", bio: "Keeping operations efficient and finances aligned with impact.", image: "/avatars/yash.jpg", linkedin: "https://lk.linkedin.com/in/yashika-nipuni-05a3181b4" },
     { name: "Abilaash Vijeakumar", role: "Director - Climate Storytelling", bio: "Translating climate work into stories people understand and engage with.", image: "/avatars/abi.jpeg", linkedin: "https://www.linkedin.com/in/abilaash-vijeyakumaren" },
