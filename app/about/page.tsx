@@ -8,7 +8,7 @@ import Transparency from "@/components/about/Transparency";
 import News from "@/components/about/News";
 
 export const metadata = {
-  title: 'About Us | Climate Intelligence Network',
+  title: 'About Us | The Climate Intelligence Network',
   description: 'Learn about the Climate Intelligence Network, our mission, values, and team.',
 };
 

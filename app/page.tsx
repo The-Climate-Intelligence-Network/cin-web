@@ -18,7 +18,7 @@ export default function Home() {
               The Climate Intelligence Network
             </span>
           </div>
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-deepForest tracking-tight leading-[1.1]">
+          <h1 className="text-5xl lg:text-7xl font-bold text-deepForest tracking-tight leading-[1.1]">
             Data Driven. <span className="text-teal">Citizen Powered.</span> 
           </h1>
           <p className="text-xl text-charcoal leading-relaxed max-w-2xl">
@@ -53,9 +53,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/5 mix-blend-multiply"></div>
         <div className="relative z-10 flex-1 space-y-4 max-w-3xl">
           <div className="text-sunflower font-bold tracking-widest text-sm uppercase">Coming Soon</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">Mission 1.5 App</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Mission 1.5 App</h2>
           <p className="text-white/95 text-lg leading-relaxed max-w-2xl">
-            A gamified platform designed to reshape how individuals and communities engage in climate action. Join the global movement for climate solutions.
+            A gamified platform designed to reshape how individuals and communities engage in climate action. Join the global movement taking meaningful climate action - anytime - anywhere!
           </p>
         </div>
         <div className="relative z-10 flex-shrink-0">
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Finished Projects Carousel */}
-      <section className="space-y-12 bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-16 -my-8 rounded-xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
+      <section className="space-y-8 bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-16 -my-8 rounded-xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
         <div className="space-y-2">
           <span className="text-teal font-bold text-sm uppercase tracking-widest">Our Work</span>
           <h2 className="text-4xl font-bold text-deepForest">Projects & Impact</h2>
@@ -129,7 +129,7 @@ export default function Home() {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 pt-4">
           {[
-            { name: "Kaif Sally", role: "Co-founder/ Director - Strategy", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
+            { name: "Kaif Sally", role: "Co-founder/ Director - Strategy & Innovation", bio: "Setting direction, priorities, and how CIN actually wins.", image: "/avatars/kaif.jpeg", linkedin: "https://www.linkedin.com/in/kaifsally/" },
             { name: "Simra Riyaz", role: "Co-founder/ Director - Policy & Legal", bio: "Navigating policy, compliance, and the rules that shape climate action.", image: "/avatars/simra.jpeg", linkedin: "https://lk.linkedin.com/in/simrariyaz" },
             { name: "Yuneth Wijenayake", role: "Co-founder/ Director - Tech + Data Controller ", bio: "Building the systems that collect, process, and power CIN’s data.", image: "/avatars/yuneth.jpg", linkedin: "https://lk.linkedin.com/in/yunethw" },
             { name: "Chathurya Wanniarachchi", role: "Co-founder/ Director - Advocacy & Legal", bio: "Turning climate issues into action through advocacy and legal pathways.", image: "/avatars/arya.jpeg", linkedin: "https://lk.linkedin.com/in/chathurya-wanniarachchi" },
@@ -192,13 +192,15 @@ export default function Home() {
               { 
                 name: "Ms. Wathsala Jayamanna", 
                 boardPosition: "Advisory Chair", 
-                role: "Programme Officer (Emergency Response & Resilience) at UNICEF Sri Lanka | 10+ years in Child Protection & Humanitarian Response.",
-                image: "/avatars/wathsala.png",
+                appointedDate: "Appointed Feb 2026",
+                role: "Programme Officer for Emergency Response & Resilience | 10+ years in Child Protection & Humanitarian Response.",
+                image: "/avatars/wathsala.jpg",
                 linkedin: "https://lk.linkedin.com/in/wathsalajayamanna"
               },
               { 
                 name: "Ms. Shanuki De Alwis", 
                 boardPosition: "Communications Advisor", 
+                appointedDate: "Appointed Feb 2026",
                 role: "23+ yrs Brand & Social Advocacy | Communications & Inclusion Specialist | Programme Director - Bleed Good Initiative.",
                 image: "/avatars/shanuki.jpg",
                 linkedin: "https://lk.linkedin.com/in/shanukidealwis"
@@ -219,7 +221,12 @@ export default function Home() {
                 </Link>
                 <div className="space-y-2 text-center sm:text-left">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-                    <h4 className="text-xl font-bold text-deepForest">{advisor.name}</h4>
+                    <div className="flex flex-col">
+                      <h4 className="text-xl font-bold text-deepForest">{advisor.name}</h4>
+                      <span className="text-charcoal/40 font-bold text-[9px] uppercase tracking-wider">
+                        {(advisor as any).appointedDate}
+                      </span>
+                    </div>
                     <span className="text-teal font-extrabold text-[10px] uppercase tracking-widest">
                       {advisor.boardPosition}
                     </span>
@@ -237,7 +244,7 @@ export default function Home() {
       {/* Get Involved pathways */}
       <section className="bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-20 -my-8 rounded-2xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)]">
         <div className="text-center space-y-12 max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-deepForest tracking-tight">Contribute to Climate Intelligence</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-deepForest tracking-tight">Contribute to Climate Intelligence</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Join */}
@@ -255,7 +262,7 @@ export default function Home() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSd58XvbvKkeGLJhpetiuJhJ6MeV5LIrwxCivZtl4wSdlYE-Yw/viewform?usp=dialog" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+                className="text-forest font-bold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
               >
                 SIGN UP
               </Link>
@@ -274,7 +281,7 @@ export default function Home() {
               </p>
               <Link 
                 href="/mission-1-5" 
-                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+                className="text-forest font-bold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
               >
                 APPLY NOW
               </Link>
@@ -293,7 +300,7 @@ export default function Home() {
               </p>
               <Link 
                 href="/get-involved" 
-                className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
+                className="text-forest font-bold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors"
               >
                 CONTACT US
               </Link>

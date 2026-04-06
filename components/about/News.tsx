@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Newspaper, ArrowRight } from 'lucide-react';
 
 export default function News() {
   const dummyNews = [
@@ -31,9 +32,7 @@ export default function News() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 max-w-6xl mx-auto">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <svg className="w-6 h-6 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line>
-            </svg>
+            <Newspaper className="w-6 h-6 text-teal" />
             <span className="text-teal font-bold text-sm uppercase tracking-widest">LATEST UPDATES</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-deepForest tracking-tight">CIN News</h2>
@@ -41,9 +40,7 @@ export default function News() {
         
         <Link href="#" className="font-extrabold text-forest uppercase tracking-widest text-sm hover:text-deepForest flex items-center gap-2 transition-colors">
           VIEW ALL NEWS
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
 
@@ -71,9 +68,7 @@ export default function News() {
               </p>
               <Link href="#" className="text-forest font-extrabold tracking-[0.2em] text-xs uppercase hover:text-deepForest transition-colors inline-flex items-center gap-2 mt-auto">
                 READ MORE
-                <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
           </div>

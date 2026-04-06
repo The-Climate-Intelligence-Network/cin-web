@@ -1,19 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ShieldCheck } from 'lucide-react';
 
 export default function AdvisoryBoard() {
   const advisors = [
     { 
       name: "Ms. Wathsala Jayamanna", 
       boardPosition: "Advisory Chair", 
-      role: "Programme Officer (Emergency Response & Resilience) at UNICEF Sri Lanka | 10+ years in Child Protection & Humanitarian Response.",
-      image: "/avatars/wathsala.png",
+      appointedDate: "Appointed Feb 2026",
+      role: "Programme Officer for Emergency Response & Resilience | 10+ years in Child Protection & Humanitarian Response.",
+      image: "/avatars/wathsala.jpg",
       linkedin: "https://lk.linkedin.com/in/wathsalajayamanna"
     },
     { 
       name: "Ms. Shanuki De Alwis", 
       boardPosition: "Communications Advisor", 
+      appointedDate: "Appointed Feb 2026",
       role: "23+ yrs Brand & Social Advocacy | Communications & Inclusion Specialist | Programme Director - Bleed Good Initiative.",
       image: "/avatars/shanuki.jpg",
       linkedin: "https://lk.linkedin.com/in/shanukidealwis"
@@ -24,10 +27,7 @@ export default function AdvisoryBoard() {
     <section className="bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-16 -my-8 rounded-xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)] list-none">
       <div className="text-center space-y-4 max-w-3xl mx-auto mb-12">
         <div className="flex items-center justify-center gap-3">
-          <svg className="w-8 h-8 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            <path d="m9 12 2 2 4-4"></path>
-          </svg>
+          <ShieldCheck className="w-8 h-8 text-teal" strokeWidth={2.5} />
           <h2 className="text-4xl md:text-5xl font-bold text-deepForest tracking-tight">Advisory Board</h2>
         </div>
         <p className="text-lg text-charcoal/80 leading-relaxed">
@@ -52,7 +52,12 @@ export default function AdvisoryBoard() {
             </Link>
             <div className="space-y-2 text-center sm:text-left">
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-                <h4 className="text-xl font-bold text-deepForest">{advisor.name}</h4>
+                <div className="flex flex-col">
+                  <h4 className="text-xl font-bold text-deepForest">{advisor.name}</h4>
+                  <span className="text-charcoal/40 font-bold text-[9px] uppercase tracking-wider">
+                    {advisor.appointedDate}
+                  </span>
+                </div>
                 <span className="text-teal font-extrabold text-[10px] uppercase tracking-widest">
                   {advisor.boardPosition}
                 </span>

@@ -13,6 +13,8 @@ interface Metric {
   value: string;
 }
 
+type ProjectCategory = "Tech for Climate" | "Community empowerment" | "Citizen science" | "Data for change";
+
 interface Project {
   title: string;
   description: string;
@@ -21,7 +23,16 @@ interface Project {
   partners: Partner[];
   accentColor: string;
   accentLight: string;
+  category: ProjectCategory;
 }
+
+const CATEGORIES: ("All" | ProjectCategory)[] = [
+  "All",
+  "Tech for Climate",
+  "Community empowerment",
+  "Citizen science",
+  "Data for change"
+];
 
 const projects: Project[] = [
   {
@@ -29,7 +40,7 @@ const projects: Project[] = [
     description: "The Local Conference of Youth (LCOY) Sri Lanka 2025 brought together 140 youth delegates across all districts of Sri Lanka for 2 days of building youth capacity in climate policy, literacy, and solution building.",
     image: "/photos/lcoy.jpg",
     metrics: [
-      { label: "Delegates", value: "140" },
+      { label: "Delegates", value: "150" },
       { label: "Districts", value: "25" }
     ],
     partners: [
@@ -43,6 +54,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-teal",
     accentLight: "bg-teal/5",
+    category: "Community empowerment",
   },
   {
     title: "YCATs",
@@ -60,6 +72,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-forest",
     accentLight: "bg-forest/5",
+    category: "Citizen science",
   },
   {
     title: "Oceans - 10",
@@ -74,6 +87,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-sunflower",
     accentLight: "bg-sunflower/5",
+    category: "Tech for Climate",
   },
   {
     title: "Advocacy at Lanka Comic Con",
@@ -88,6 +102,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-teal",
     accentLight: "bg-teal/5",
+    category: "Community empowerment",
   },
   {
     title: "Cyclone Ditwah Joint Rapid Needs Assessment Support",
@@ -102,6 +117,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-deepIris",
     accentLight: "bg-deepIris/5",
+    category: "Data for change",
   }
 ];
 
@@ -109,14 +125,26 @@ export default function ProjectCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<"All" | ProjectCategory>("All");
+
+  const filteredProjects = activeCategory === "All"
+    ? projects
+    : projects.filter(p => p.category === activeCategory);
 
   const checkScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+      setCanScrollRight(Math.ceil(scrollLeft) < scrollWidth - clientWidth - 10);
     }
   };
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+      setTimeout(checkScroll, 50); // slight delay to allow layout
+    }
+  }, [activeCategory]);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -135,44 +163,65 @@ export default function ProjectCarousel() {
   };
 
   return (
-    <div className="relative group/carousel">
-      {/* Navigation Controls */}
-      <div className="absolute -top-24 right-0 flex items-center gap-3">
-        <button
-          onClick={() => scroll("left")}
-          disabled={!canScrollLeft}
-          className={`p-3 rounded-full border border-forest transition-all flex items-center justify-center ${
-            canScrollLeft 
-              ? "text-forest hover:bg-forest hover:text-white cursor-pointer" 
-              : "text-forest/20 border-forest/10 cursor-not-allowed"
-          }`}
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          disabled={!canScrollRight}
-          className={`p-3 rounded-full border border-forest transition-all flex items-center justify-center ${
-            canScrollRight 
-              ? "text-forest hover:bg-forest hover:text-white cursor-pointer" 
-              : "text-forest/20 border-forest/10 cursor-not-allowed"
-          }`}
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+    <div className="flex flex-col gap-4">
+      {/* Filters and Navigation */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        {/* Filter Chips */}
+        <div className="flex flex-wrap items-center gap-2">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
+                activeCategory === cat
+                  ? "bg-deepForest text-white"
+                  : "bg-forest/5 text-forest hover:bg-forest/10"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex items-center gap-2 hidden md:flex">
+          <button
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            className={`p-2.5 rounded-full border border-forest transition-all flex items-center justify-center ${
+              canScrollLeft 
+                ? "text-forest hover:bg-forest hover:text-white cursor-pointer" 
+                : "text-forest/20 border-forest/10 cursor-not-allowed"
+            }`}
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            className={`p-2.5 rounded-full border border-forest transition-all flex items-center justify-center ${
+              canScrollRight 
+                ? "text-forest hover:bg-forest hover:text-white cursor-pointer" 
+                : "text-forest/20 border-forest/10 cursor-not-allowed"
+            }`}
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Carousel Container */}
-      <div 
-        ref={scrollRef}
-        className="flex gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8 pt-4"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        {projects.map((project, index) => (
+      <div className="relative group/carousel">
+        <div 
+          ref={scrollRef}
+          className="flex gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8 pt-2"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -240,7 +289,7 @@ export default function ProjectCarousel() {
                 <div className="grid grid-cols-2 gap-4 mt-auto pt-6 border-t border-forest/5 bg-surface/30 -mx-8 px-8 rounded-b-2xl">
                   {project.metrics.map((metric, mIdx) => (
                     <div key={mIdx}>
-                      <div className="text-2xl font-extrabold text-deepForest tracking-tight leading-none mb-1">
+                      <div className="text-2xl font-bold text-deepForest tracking-tight leading-none mb-1">
                         {metric.value}
                       </div>
                       <div className="text-[9px] font-bold text-charcoal/50 uppercase tracking-[0.15em]">
@@ -258,6 +307,7 @@ export default function ProjectCarousel() {
       {/* Decorative Gradient Fades */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F7FAF4] to-transparent pointer-events-none opacity-50 md:block hidden" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F7FAF4] to-transparent pointer-events-none opacity-50 md:block hidden" />
+      </div>
     </div>
   );
 }
