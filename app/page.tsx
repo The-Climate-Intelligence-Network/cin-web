@@ -18,7 +18,7 @@ export default function Home() {
               The Climate Intelligence Network
             </span>
           </div>
-          <h1 className="text-5xl lg:text-7xl font-bold text-deepForest tracking-tight leading-[1.1]">
+          <h1 className="text-5xl lg:text-7xl font-extrabold text-deepForest tracking-tight leading-[1.1]">
             Data Driven. <span className="text-teal">Citizen Powered.</span> 
           </h1>
           <p className="text-xl text-charcoal leading-relaxed max-w-2xl">

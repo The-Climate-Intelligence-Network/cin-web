@@ -72,7 +72,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-forest",
     accentLight: "bg-forest/5",
-    category: "Citizen science",
+    category: "Community empowerment",
   },
   {
     title: "Oceans - 10",
@@ -87,7 +87,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-sunflower",
     accentLight: "bg-sunflower/5",
-    category: "Tech for Climate",
+    category: "Data for change",
   },
   {
     title: "Advocacy at Lanka Comic Con",
@@ -102,7 +102,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-teal",
     accentLight: "bg-teal/5",
-    category: "Community empowerment",
+    category: "Data for change",
   },
   {
     title: "Cyclone Ditwah Joint Rapid Needs Assessment Support",
@@ -117,7 +117,7 @@ const projects: Project[] = [
     ],
     accentColor: "border-deepIris",
     accentLight: "bg-deepIris/5",
-    category: "Data for change",
+    category: "Citizen science",
   }
 ];
 
