@@ -41,7 +41,7 @@ export default function PrinciplesValues() {
           <div className="w-14 h-14 rounded-full bg-forest/10 flex items-center justify-center text-forest mb-6">
             <Globe className="w-6 h-6" strokeWidth={2.5} />
           </div>
-          <h3 className="text-2xl font-bold text-deepForest mb-3">Global South Focus</h3>
+          <h3 className="text-2xl font-bold text-deepForest mb-3">Climate Justice</h3>
           <p className="text-charcoal leading-relaxed flex-grow">
             We prioritize the voices and needs of communities in the Global South, who are often most affected by climate change.
           </p>

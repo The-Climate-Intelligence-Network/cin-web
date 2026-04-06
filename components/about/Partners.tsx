@@ -1,11 +1,11 @@
-import { Briefcase } from 'lucide-react';
+import { Handshake } from 'lucide-react';
 
 export default function Partners() {
   return (
     <section className="bg-[#F7FAF4] -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 py-16 -my-8 rounded-xl border border-forest/5 shadow-[inset_0_1px_6px_rgba(0,0,0,0.02)] grid grid-cols-1 gap-12 text-center">
       <div className="space-y-4 max-w-3xl mx-auto">
         <div className="flex items-center justify-center gap-3">
-          <Briefcase className="w-8 h-8 text-teal" />
+          <Handshake className="w-8 h-8 text-teal" />
           <h2 className="text-4xl md:text-5xl font-bold text-deepForest tracking-tight">Our Partners</h2>
         </div>
         <p className="text-lg text-charcoal/80 leading-relaxed">
